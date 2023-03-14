@@ -17,8 +17,7 @@ public class App
      */
     public static void main( String[] args )
     {
-        Javalin app = JavalinSingleton.getInstance();
-
-        app.start(9000);
+       Javalin app = JavalinSingleton.getInstance();
+       app.start(9000);
     }
 }

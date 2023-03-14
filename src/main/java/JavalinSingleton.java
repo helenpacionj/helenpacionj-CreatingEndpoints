@@ -1,5 +1,4 @@
 
-
 import io.javalin.Javalin;
 
 public class JavalinSingleton {
@@ -16,10 +15,15 @@ public class JavalinSingleton {
      */
     public static Javalin getInstance(){
         Javalin app = Javalin.create();
-        
+
+        //--> code starts here
+        String strHello = "Hello World";
+        app.get("/hello", ctx -> {
+            ctx.result(strHello);
+        });
+
         //write endpoint here
 
-        return app;
+       return app;
     }
-    
 }
